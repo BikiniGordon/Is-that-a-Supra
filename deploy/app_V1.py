@@ -21,7 +21,7 @@ st.title("Is that a Supra?!")
 st.markdown('"Is that a Supra?!" is a project that will help you identify a Toyota car\'s model from the image you upload.')
 st.markdown("Please upload your image of Toyota car or use the sample images on the left sidebar.")
 
-sample_path = ("D:/Ai_Projects/Toyota_classification/deploy/sample_images")
+sample_path = ("deploy/sample_images")
 file_name = os.listdir(sample_path)
 sample_image = st.sidebar.selectbox(
     'Sample images',
@@ -38,7 +38,7 @@ else:
     st.title("Here is the image you've selected")
     st.image(img)
 
-model = load_learner("D:/Ai_Projects/Toyota_classification/deploy/tytc_resnet34_fastai_R8.pkl")
+model = load_learner("/tytc_resnet34_fastai_R8.pkl")
 a, b, c = model.predict(img)
 
 if a in ['supra']:
