@@ -14,7 +14,7 @@ from fastai.vision.all import *
 from fastai.vision.widgets import *
 import pathlib
 temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
+pathlib.WindowsPath = pathlib.PosixPath
 
 
 st.title("Is that a Supra?!")
