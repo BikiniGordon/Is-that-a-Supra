@@ -38,7 +38,7 @@ else:
     st.title("Here is the image you've selected")
     st.image(img)
 
-model = load_learner("/tytc_resnet34_fastai_R8.pkl")
+model = load_learner("deploy/tytc_resnet34_fastai_R8.pkl")
 a, b, c = model.predict(img)
 
 if a in ['supra']:
