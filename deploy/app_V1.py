@@ -16,6 +16,7 @@ import pathlib
 temp = pathlib.PosixPath
 pathlib.WindowsPath = pathlib.PosixPath #if run on window and not streamlit cloud pathlib.PosixPath = pathlib.WindowsPath
 
+model = load_learner("deploy/tytc_resnet34_fastai_R8.pkl") # load model
 
 st.title("Is that a Supra?!") #Title
 st.markdown('"Is that a Supra?!" is a project that will help you identify a Toyota car\'s model from the image you upload.') #information
@@ -38,7 +39,6 @@ else:
     st.title("Here is the image you've selected") #display selected image
     st.image(img)
 
-model = load_learner("deploy/tytc_resnet34_fastai_R8.pkl") # load model
 a, b, c = model.predict(img) #predict model
 
 if a in ['supra']: #easter egg
