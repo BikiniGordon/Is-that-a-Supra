@@ -14,7 +14,7 @@ from fastai.vision.all import *
 from fastai.vision.widgets import *
 import pathlib
 temp = pathlib.PosixPath
-pathlib.WindowsPath = pathlib.PosixPath
+pathlib.WindowsPath = pathlib.PosixPath #if run on window and not streamlit cloud pathlib.PosixPath = pathlib.WindowsPath
 
 
 st.title("Is that a Supra?!") #Title
