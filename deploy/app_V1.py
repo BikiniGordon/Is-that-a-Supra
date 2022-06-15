@@ -17,36 +17,36 @@ temp = pathlib.PosixPath
 pathlib.WindowsPath = pathlib.PosixPath
 
 
-st.title("Is that a Supra?!")
-st.markdown('"Is that a Supra?!" is a project that will help you identify a Toyota car\'s model from the image you upload.')
-st.markdown("Please upload your image of Toyota car or use the sample images on the left sidebar.")
+st.title("Is that a Supra?!") #Title
+st.markdown('"Is that a Supra?!" is a project that will help you identify a Toyota car\'s model from the image you upload.') #information
+st.markdown("Please upload your image of Toyota car or use the sample images on the left sidebar.") #information
 
-sample_path = ("deploy/sample_images")
-file_name = os.listdir(sample_path)
-sample_image = st.sidebar.selectbox(
+sample_path = ("deploy/sample_images") #folder sameple images
+file_name = os.listdir(sample_path) #file name from folder
+sample_image = st.sidebar.selectbox(   #create selectbox sidebar
     'Sample images',
     (file_name))
 
-file = st.file_uploader("Upload your image")
+file = st.file_uploader("Upload your image") #upload file
 if file is None:
     img = PILImage.create(os.path.join(sample_path, sample_image))
-    st.title("Here is the sample image")
+    st.title("Here is the sample image") #display sample image
     st.image(img)
 
 else:
     img = PILImage.create(file)
-    st.title("Here is the image you've selected")
+    st.title("Here is the image you've selected") #display selected image
     st.image(img)
 
-model = load_learner("deploy/tytc_resnet34_fastai_R8.pkl")
-a, b, c = model.predict(img)
+model = load_learner("deploy/tytc_resnet34_fastai_R8.pkl") # load model
+a, b, c = model.predict(img) #predict model
 
-if a in ['supra']:
-    st.success(f"Wow! That is a **{a}**  with the probability of **{c[b]*100:.02f}**%")
+if a in ['supra']: #easter egg
+    st.success(f"Wow! That is a **{a}**  with the probability of **{c[b]*100:.02f}**%") #result display
     st.balloons()
 
 else:
-    st.success(f"The car model is **{a}**  with the probability of **{c[b]*100:.02f}**%")
+    st.success(f"The car model is **{a}**  with the probability of **{c[b]*100:.02f}**%") #result display
 
 #st.markdown('https://www.youtube.com/watch?v=8sgycukafqQ&list=RD2miAJe2OE8U&index=2')
 
