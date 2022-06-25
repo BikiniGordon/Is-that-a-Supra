@@ -42,13 +42,15 @@ else:
 a, b, c = model.predict(img) #predict model
 
 if a in ['supra']: #easter egg
-    st.success(f"Wow! That is a **{a}**  with the probability of **{c[b]*100:.02f}**%") #result display
+    st.success(f"Wow! That is a **{a}**  with the probability of **{c[b]*100:.02f}**%") #result displays
     st.balloons()
 
 else:
     st.success(f"The car model is **{a}**  with the probability of **{c[b]*100:.02f}**%") #result display
 
 #st.markdown('https://www.youtube.com/watch?v=8sgycukafqQ&list=RD2miAJe2OE8U&index=2')
+st.markdown('Medium (Thai version) : https://medium.com/@gatchanminecraft/is-that-a-supra-thai-version-405cb2231f2b')
+st.markdown('GitHub : https://github.com/BikiniGordon/Is-that-a-Supra')
 
 
 
