@@ -48,8 +48,8 @@ if a in ['supra']: #easter egg
 else:
     st.success(f"The car model is **{a}**  with the probability of **{c[b]*100:.02f}**%") #result display
 
-#st.markdown('https://www.youtube.com/watch?v=8sgycukafqQ&list=RD2miAJe2OE8U&index=2')
-st.markdown('Medium (Thai version) : https://medium.com/@gatchanminecraft/is-that-a-supra-thai-version-405cb2231f2b')
+st.markdown('For more information and info on how this app was made.')
+st.markdown('Medium : https://medium.com/@gatchanminecraft/is-that-a-supra-thai-version-405cb2231f2b')
 st.markdown('GitHub : https://github.com/BikiniGordon/Is-that-a-Supra')
 
 
