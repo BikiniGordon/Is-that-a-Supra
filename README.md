@@ -5,6 +5,4 @@ An Image classification model made to classify a Toyota car into a categories of
 
 Medium (Thai version) : https://medium.com/@gatchanminecraft/is-that-a-supra-thai-version-405cb2231f2b
 
-Medium (English version) :
-
 And this is a model that I deployed using streamlit : https://share.streamlit.io/bikinigordon/is-that-a-supra/main/deploy/app_V1.py
